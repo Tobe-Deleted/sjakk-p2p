@@ -1,8 +1,17 @@
-[gd_scene format=3 uid="uid://1xgwh6bccipy"]
+[gd_scene load_steps=3 format=3 uid="uid://1xgwh6bccipy"]
+
+[ext_resource type="PackedScene" uid="uid://b2kwywolltop3" path="res://Scenes/board.tscn" id="1_btftv"]
+[ext_resource type="Texture2D" uid="uid://bfuev3r4hxfu1" path="res://Assets/Board.png" id="1_yerer"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.1, 0.1)
+position = Vector2(425.03, -402.5)
+zoom = Vector2(0.7, 0.7)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Board" parent="." instance=ExtResource("1_btftv")]
+position = Vector2(424.03, -424.2)
+scale = Vector2(1.056, 1)
+texture = ExtResource("1_yerer")
